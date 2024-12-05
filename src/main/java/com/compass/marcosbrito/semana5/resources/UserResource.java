@@ -1,5 +1,6 @@
 package com.compass.marcosbrito.semana5.resources;
 
+import com.compass.marcosbrito.semana5.domain.Post;
 import com.compass.marcosbrito.semana5.domain.User;
 import com.compass.marcosbrito.semana5.dto.UserDTO;
 import com.compass.marcosbrito.semana5.services.UserService;
@@ -60,9 +61,9 @@ public class UserResource {
         return ResponseEntity.noContent().build();
     }
 
-//    @RequestMapping(value="/{id}/posts", method=RequestMethod.GET)
-//    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
-//        User obj = service.findById(id);
-//        return ResponseEntity.ok().body(obj.getPosts());
-//    }
+    @RequestMapping(value="/{id}/posts", method=RequestMethod.GET)
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User obj = service.findById(id);
+        return ResponseEntity.ok().body(obj.getPosts()); //retornas os post deste objeto
+    }
 }
