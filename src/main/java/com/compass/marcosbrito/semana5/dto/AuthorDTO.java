@@ -7,6 +7,9 @@ import java.io.Serializable;
 
 public class AuthorDTO implements Serializable {
     private static final long serialVersionUID = 1L;
+    /*
+    Uso esse DTO no intuito de aprenas apresentar uma projecao do autor original
+     */
 
     private String id;
     private String name;
