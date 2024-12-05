@@ -15,6 +15,12 @@ public interface PostRepository extends MongoRepository<Post,String> {
     /*
      Usando Query procurar post com um determinado texto
      */
+
+    //.
+    /*'title': - Cmapo
+     { $regex: ?0, -> Priemrio parametro
+     $options: 'i' } -> Iginera as Stirng
+    * */
     @Query("{ 'title': { $regex: ?0, $options: 'i' } }")
     List<Post> searchTitle(String text);
 
