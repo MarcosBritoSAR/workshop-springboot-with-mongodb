@@ -1,5 +1,6 @@
 package com.compass.marcosbrito.semana5.domain;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -19,8 +20,11 @@ public class User implements Serializable {
     private String name;
     private String email;
 
-    // @DBRef(lazy = true)
-    //   private List<Post> posts = new ArrayList<>();
+     @DBRef(lazy = true) //Uso para fazer referencias
+     /*
+     Para que serve o Lazy = True? Serve permitir que os dados sejam carregados conforme a necessidade. Caso contrario, toda a lista seria carregada na requisição
+      */
+     private List<Post> posts = new ArrayList<>(); //Criando a minha lista de post
 
     public User() {
     }
@@ -56,13 +60,13 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    //  public List<Post> getPosts() {
-    //     return posts;
-    //  }
+      public List<Post> getPosts() {
+         return posts;
+      }
 
-    // public void setPosts(List<Post> posts) {
-        //     this.posts = posts;
-    // }
+     public void setPosts(List<Post> posts) {
+             this.posts = posts;
+     }
 
     @Override
     public int hashCode() {

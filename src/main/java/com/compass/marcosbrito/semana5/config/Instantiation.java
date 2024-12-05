@@ -59,8 +59,8 @@ import java.util.Arrays;
 //
             postReposiroty.saveAll(Arrays.asList(post1, post2));
 //
-//            maria.getPosts().addAll(Arrays.asList(post1, post2));
-//            userReposiroty.save(maria);
+            maria.getPosts().addAll(Arrays.asList(post1, post2)); //Adicionando 2 posts a maria
+            userReposiroty.save(maria);
         }
 //
 //    }
