@@ -21,6 +21,7 @@ public class URL {
     }
 
     public static Date convertDate(String textDate, Date defaultValue) {
+        //Formatando as datas
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
         try {

@@ -1,12 +1,11 @@
 package com.compass.marcosbrito.semana5.repository;
 
 import com.compass.marcosbrito.semana5.domain.Post;
-import com.compass.marcosbrito.semana5.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 @Repository
